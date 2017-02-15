@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "__MSG_extensionName__",
+    "version": "0.1",
+    "description": "__MSG_extensionDescription__",
+    "icons": {
+        "48": "icons/icon.png",
+        "96": "icons/icon@2x.png"
+    },
+    "author": "Kim, Sung-Jun",
+    "default_locale": "ko",
+    "developer": {
+        "name": "Kim, Sung-Jun",
+        "url": "http://clauzewitz.com"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://bbs.ruliweb.com/*"],
+            "js": ["ruliweb_comment_blocker.js"]
+        }
+    ],
+    "options_ui": {
+        "page": "options.html"
+    },
+    "permissions": [
+        "contextMenus",
+        "storage"
+    ]
+}

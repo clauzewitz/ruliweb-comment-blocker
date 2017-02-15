@@ -1,0 +1,19 @@
+{
+    "extensionName": {
+        "message": "Ruliweb Comment Blocker",
+        "description": "Name of the extension."
+    },
+
+    "extensionDescription": {
+        "message": "루리웹 댓글 차단기",
+        "description": "Description of the add-on."
+    },
+    "contextMenuUserAdd": {
+        "message": "사용자 차단 등록",
+        "description": "blocker list add user"
+    },
+    "contextMenuUserRemove": {
+        "message": "사용자 차단 해제",
+        "description": "blocker list remove user"
+    }
+}
