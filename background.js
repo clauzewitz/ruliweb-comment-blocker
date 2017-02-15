@@ -18,13 +18,13 @@ browser.contextMenus.remove("user-add", function () {
     }, onCreated);
 });
 
-browser.contextMenus.remove("user-remove", function () {
-    browser.contextMenus.create({
-        id: "user-remove",
-        title: browser.i18n.getMessage("contextMenuUserRemove"),
-        contexts: ["page"]
-    }, onCreated);
-});
+// browser.contextMenus.remove("user-remove", function () {
+//     browser.contextMenus.create({
+//         id: "user-remove",
+//         title: browser.i18n.getMessage("contextMenuUserRemove"),
+//         contexts: ["page"]
+//     }, onCreated);
+// });
 
 function checkSiteUrl(pageUrl) {
     return /ruliweb.com/.test(pageUrl);
