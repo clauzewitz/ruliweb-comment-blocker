@@ -26,6 +26,10 @@ browser.contextMenus.remove("user-remove", function () {
     }, onCreated);
 });
 
+function checkSiteUrl(pageUrl) {
+    return /ruliweb.com/.test(pageUrl);
+}
+
 function addUserToBlockList(userId) {
     if (userId) {
         function getStorageSuccess(result) {
@@ -59,15 +63,17 @@ The click event listener, where we perform the appropriate action given the
 ID of the menu item that was clicked.
 */
 function listener(info, tab) {
-    switch (info.menuItemId) {
-        case "user-add":
-            console.log(info);
-            // console.log(info.selectionText);
-            addUserToBlockList(info.selectionText);
-            break;
-        case "user-remove":
-            console.log(info.selectionText);
-            break;
+    if (info && checkSiteUrl(info.pageUrl)) {
+        switch (info.menuItemId) {
+            case "user-add":
+                console.log(info);
+                // console.log(info.selectionText);
+                addUserToBlockList(info.selectionText);
+                break;
+            case "user-remove":
+                console.log(info.selectionText);
+                break;
+        }
     }
 }
 
